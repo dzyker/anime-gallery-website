@@ -1,16 +1,57 @@
-# React + Vite
+# Image Gallery App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun project - an interactive image gallery application built with React and Vite. This application allows you to browse and view images from the waifu.pics API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Customizable Backgrounds** - Switch between multiple beautiful background images
+- 🖼️ **Image Gallery** - Browse and view images in a responsive grid layout
+- 🔍 **Image Categories** - Choose from various image categories (waifu, neko, and many more)
+- 🔒 **Mode Selection** - Toggle between SFW (Safe For Work) and NSFW content
+- 👁️ **Full-Screen View** - Click on any image to view it in full size with a modal window
+- ⚡ **Fast Loading** - Parallel image fetching for optimal performance
+- 🎯 **Duplicate Prevention** - Automatic filtering of duplicate images
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** 19.2.0
+- **Vite** 7.2.4
+- **CSS3** with modern styling and animations
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview
+
+```bash
+npm run preview
+```
+
+## Usage
+
+1. Select your preferred content mode (SFW or NSFW)
+2. Choose an image category from the dropdown
+3. Click "Load More" to fetch additional images
+4. Click on any image to view it in full screen
+5. Use the background changer button to switch between different background themes
+
+## Note
+
+This is a fun side project created for entertainment purposes. The application uses the [waifu.pics](https://waifu.pics/) API for image content.
