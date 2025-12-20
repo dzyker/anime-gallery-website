@@ -4,6 +4,7 @@ import ModeSelector from './assets/components/ModeSelector'
 import Gallery from './assets/components/Gallery'
 import ButtonsGroup from './assets/components/ButtonsGroup'
 import ModalWindow from './assets/components/ModalWindow'
+import SearchForm from './assets/components/SearchForm'
 
 import Background1 from './assets/Backgrounds/Background1.jpg'
 import Background2 from './assets/Backgrounds/Background2.jpg'
@@ -17,7 +18,7 @@ import Background9 from './assets/Backgrounds/Background9.jpg'
 import Background10 from './assets/Backgrounds/Background10.jpg'
 import Background11 from './assets/Backgrounds/Background11.jpg'
 import Background12 from './assets/Backgrounds/Background12.jpg'
-import SearchForm from './assets/components/SearchForm'
+
 
 function App() {
 
@@ -152,7 +153,7 @@ function App() {
 
       <Gallery content={content} setSelectedImage={setSelectedImage} />
 
-      <ButtonsGroup fetchMultipleImages={fetchMultipleImages} content={content} setContent={setContent} changeBackground={changeBackground} />
+      <ButtonsGroup imageType={imageType} fetchMultipleImages={fetchMultipleImages} content={content} setContent={setContent} changeBackground={changeBackground} />
 
       <ModalWindow selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
     </div>
