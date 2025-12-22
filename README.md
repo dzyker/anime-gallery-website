@@ -57,3 +57,7 @@ npm run preview
 ## Note
 
 This is a fun side project created for entertainment purposes. The application uses the [waifu.pics](https://waifu.pics/) API for image content.
+
+## test branching
+
+1. Some text...
