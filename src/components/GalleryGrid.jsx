@@ -1,5 +1,6 @@
+import "./GalleryGrid.css"
 
-function Gallery({ content, setSelectedImage }) {
+function GalleryGrid({ content, setSelectedImage }) {
     return (<div className="gallery-container">
                 {content.length > 0 ? (
                 <div className="gallery">
@@ -29,4 +30,4 @@ function Gallery({ content, setSelectedImage }) {
             </div>)
 }
 
-export default Gallery
+export default GalleryGrid
