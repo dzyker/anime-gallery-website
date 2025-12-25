@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
+import "./Gallery.css"
 import ModeSelector from '../components/ModeSelector'
 import GalleryGrid from '../components/GalleryGrid'
 import ButtonsGroup from '../components/ButtonsGroup'

@@ -1,5 +1,3 @@
-import "./GalleryGrid.css"
-
 function GalleryGrid({ content, setSelectedImage }) {
     return (<div className="gallery-container">
                 {content.length > 0 ? (
