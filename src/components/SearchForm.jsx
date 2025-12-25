@@ -1,12 +1,14 @@
+import './SearchForm.css'
+
 function SearchForm({ imageType, setImageType, mode, sfwList, nsfwList }) {
     return(<div className="search-form">
-                <div className="select-group">
-                <label htmlFor="image-type-select" className="select-label">
+                <div className="search-select-group">
+                <label htmlFor="image-type-select" className="search-select-label">
                     Выберите тип изображения:
                 </label>
                 <select
                     id="image-type-select"
-                    className="image-type-select"
+                    className="search-select"
                     value={imageType}
                     onChange={(e) => setImageType(e.target.value)}
                 >

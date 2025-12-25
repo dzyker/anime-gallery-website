@@ -1,3 +1,5 @@
+import './ModeSelector.css'
+
 function ModeSelector({ mode, changeMode }) {
 
     return (<div className="mode-selector">

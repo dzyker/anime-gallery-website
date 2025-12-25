@@ -1,0 +1,73 @@
+.mode-selector {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.mode-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 3px;
+  position: relative;
+}
+
+.mode-option {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.mode-text {
+  display: block;
+  padding: 8px 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  color: #666;
+  background: transparent;
+}
+
+.mode-option.active .mode-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.mode-option:not(.active):hover .mode-text {
+  background: rgba(255, 255, 255, 0.5);
+  color: #333;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .mode-toggle {
+    flex-direction: column;
+  }
+
+  .mode-selector {
+    padding: 10px;
+  }
+}
+

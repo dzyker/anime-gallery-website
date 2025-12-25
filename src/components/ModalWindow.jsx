@@ -1,3 +1,5 @@
+import './ModalWindow.css'
+
 function ModalWindow({ selectedImage, setSelectedImage }) {
 
     return (selectedImage && (

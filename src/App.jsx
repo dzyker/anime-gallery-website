@@ -1,4 +1,5 @@
 import { Routes, Route, NavLink, Navigate, Outlet } from "react-router-dom"
+import Header from "./components/Header"
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Favorites from './pages/Favorites'
@@ -7,14 +8,7 @@ import Settings from './pages/Settings'
 function Layout() {
   return (
     <div className='app'>
-      <header className='nav'>
-        <nav>
-          <NavLink to='/' end className={({isActive}) => (isActive ? "active" : "")}>Home</NavLink>
-          <NavLink to='/gallery' className={({isActive}) => (isActive ? "active" : "")}>Gallery</NavLink>
-          <NavLink to='/favorites' className={({isActive}) => (isActive ? "active" : "")}>Favorites</NavLink>
-          <NavLink to='/settings' className={({isActive}) => (isActive ? "active" : "")}>Settings</NavLink>
-        </nav>
-      </header>
+      <Header />
       <main>
         <Outlet />
       </main>

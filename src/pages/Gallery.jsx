@@ -120,28 +120,28 @@ function Gallery() {
   
     if (loading) {
       return (
-        <div className="loading-container">
-          <div className="spinner"></div>
+        <div className="gallery-loading-container">
+          <div className="gallery-spinner"></div>
           <p>Загрузка изображений...</p>
         </div>
       )
     }
-  
+
     if (error) {
       return (
-        <div className="error-container">
+        <div className="gallery-error-container">
           <p>Ошибка: {error.message}</p>
         </div>
       )
     }
-  
+
     return (
       <div className="app app-image" style={backgroundStyle}>
-        <header className="header">
+        <header className="gallery-page-header">
           <h1>Галерея изображений</h1>
         </header>
-  
-        <div className="controls-section">
+
+        <div className="gallery-controls-section">
           <SearchForm imageType={imageType} setImageType={setImageType} mode={mode} sfwList={sfwList} nsfwList={nsfwList} />
           
           <ModeSelector mode={mode} changeMode={changeMode} />
