@@ -1,10 +1,8 @@
-import "./App.css"
 import { Routes, Route, NavLink, Navigate, Outlet } from "react-router-dom"
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Favorites from './pages/Favorites'
 import Settings from './pages/Settings'
-
 
 function Layout() {
   return (
