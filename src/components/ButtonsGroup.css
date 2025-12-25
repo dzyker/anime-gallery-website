@@ -1,0 +1,86 @@
+.buttons-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-bottom: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.buttons-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.buttons-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-btn-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.buttons-btn-secondary:active {
+  background: linear-gradient(135deg, #c87ad1 0%, #ce495b 100%);
+}
+
+.buttons-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-btn-danger {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: #333;
+}
+
+.buttons-btn-danger:active {
+  background: linear-gradient(135deg, #de6388 0%, #e0c738 100%);
+  color: #333;
+}
+
+.buttons-btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-btn-background {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.buttons-btn-background:active {
+  background: linear-gradient(135deg, #479ae2 0%, #00d8e4 100%);
+  color: white;
+}
+
+.buttons-btn-background:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .buttons-group {
+    flex-direction: column;
+  }
+
+  .buttons-btn {
+    width: 100%;
+  }
+}
+
