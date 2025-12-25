@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, Navigate, Outlet, useLocation } from "react-router-dom"
+import { Routes, Route, NavLink, Navigate, Outlet } from "react-router-dom"
 import Home from './pages/Home'
 import Gallery from './pages/Gallery'
 import Favorites from './pages/Favorites'
