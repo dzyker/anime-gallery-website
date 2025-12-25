@@ -1,6 +1,9 @@
 function ButtonsGroup({ imageType, fetchMultipleImages, content, setContent, changeBackground }) {
     return (<div className="buttons-group">
-        <button onClick={() => fetchMultipleImages(5, imageType)} className="btn btn-secondary">
+        <button 
+            onClick={() => fetchMultipleImages(5, imageType)} 
+            className="btn btn-secondary"
+        >
             Загрузить еще
         </button>
         {content.length > 0 && (
