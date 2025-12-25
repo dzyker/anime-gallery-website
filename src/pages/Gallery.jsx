@@ -28,11 +28,10 @@ function Gallery() {
     const [mode, setMode] = useState('sfw')
     const [currentBackground, setCurrentBackground] = useState(0)
   
-    // Загружаем 4 картинки при монтировании или изменении типа
     useEffect(() => {
       async function initialLoad() {
         setLoading(true)
-        setContent([]) // Очищаем предыдущие картинки при смене типа
+        setContent([])
         await fetchMultipleImages(4, imageType)
         setLoading(false)
       }
@@ -57,7 +56,6 @@ function Gallery() {
       Background12
     ]
   
-    // выбор заднего фона
     function changeBackground() {
       setCurrentBackground((prev) => (prev + 1) % backgrounds.length)
     }
@@ -80,7 +78,6 @@ function Gallery() {
       return {}
     }, [currentBackground])
   
-    //смена режима
     function changeMode(e) {
       const newMode = e.target.value
       setMode(newMode)
@@ -95,7 +92,7 @@ function Gallery() {
       try {
         setError(null)
   
-        // Создаем массив промисов для параллельной загрузки
+        // Создаем массив промисов
         const promises = Array.from({ length: count }, () =>
           fetch(`https://api.waifu.pics/${mode || 'sfw'}/${type || 'waifu'}`)
             .then(response => {

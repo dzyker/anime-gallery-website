@@ -5,7 +5,6 @@ import Favorites from './pages/Favorites'
 import Settings from './pages/Settings'
 
 function Layout() {
-  const location = useLocation();
   return (
     <div className='app'>
       <header className='nav'>
@@ -15,7 +14,6 @@ function Layout() {
           <NavLink to='/favorites' className={({isActive}) => (isActive ? "active" : "")}>Favorites</NavLink>
           <NavLink to='/settings' className={({isActive}) => (isActive ? "active" : "")}>Settings</NavLink>
         </nav>
-        <span>Сейчас: {location.pathname}</span>
       </header>
       <main>
         <Outlet />
