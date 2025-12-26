@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import { FaGithub, FaTelegram, FaVk } from 'react-icons/fa'
-import './Header.css'
+import './Navigation.css'
 
 function Header() {
     return (
