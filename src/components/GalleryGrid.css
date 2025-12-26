@@ -27,7 +27,7 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.gallery-grid-item img {
+.gallery-grid-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -55,6 +55,45 @@
 .gallery-grid-icon {
   font-size: 3rem;
   color: white;
+}
+
+.gallery-grid-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid-favorite:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-grid-favorite img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.gallery-grid-favorite.active {
+  background: rgba(255, 215, 0, 0.9);
+}
+
+.gallery-grid-favorite.active:hover {
+  background: rgba(255, 215, 0, 1);
 }
 
 .gallery-grid-empty {

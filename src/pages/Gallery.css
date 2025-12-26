@@ -1,23 +1,23 @@
-.gallery-page-header {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.gallery-app {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
 }
 
-.gallery-page-header h1 {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+.gallery-app-image {
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
 }
 
 .gallery-controls-section {
   max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: auto;
+  padding: 25px 20px;
 }
 
 .gallery-loading-container,
