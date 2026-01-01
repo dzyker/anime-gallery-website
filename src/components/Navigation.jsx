@@ -18,8 +18,8 @@ function Header() {
                 <input id="header-en-language" onChange={() => setLanguage("en")} checked={language === "en"} type="radio" name="select-language"/>
                 <label htmlFor="header-en-language" className="header-set-language-label">EN</label>
 
-                <NavLink to='/'><img className="header-logo" src={logo} alt="logo" /></NavLink>
             </div>
+            <NavLink to='/'><img className="header-logo" src={logo} alt="logo" /></NavLink>
             <nav>
                 <NavLink to='/' end className={({isActive}) => isActive ? "header-nav__link active" : "header-nav__link"}>{getTranslation("home")}</NavLink>
                 <NavLink to='/gallery' className={({isActive}) => isActive ? "header-nav__link active" : "header-nav__link"}>{getTranslation("gallery")}</NavLink>
