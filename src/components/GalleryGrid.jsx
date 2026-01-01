@@ -3,10 +3,12 @@ import favoriteFalse from '../assets/favorite-false.png';
 import favoriteTrue from '../assets/favorite-true.png';
 import { useContext } from 'react'
 import { favoritesContext } from '../contexts/FavoritesContext'
+import { languageContext } from '../contexts/LanguageContext';
 
 function GalleryGrid({ content, setSelectedImage, inFavorite }) {
 
     const { toggleFavorite, isFavorite } = useContext(favoritesContext)
+    const {language, getTranslation} = useContext(languageContext)
 
     return (
       <div className="gallery-grid-container">
@@ -35,11 +37,11 @@ function GalleryGrid({ content, setSelectedImage, inFavorite }) {
                             e.stopPropagation();
                             toggleFavorite(el.url);
                         }}
-                        title={favorite ? "Удалить из избранного" : "Добавить в избранное"}
+                        title={favorite ? getTranslation("removeFavorite") : getTranslation("addFavorite") }
                     >
                         <img
                             src={favorite ? favoriteTrue : favoriteFalse}
-                            alt={favorite ? "В избранном" : "Добавить в избранное"}
+                            alt={favorite ? getTranslation("inFavorite")  : getTranslation("addFavorite")}
                         />
                     </button>
                 </div>)
@@ -47,11 +49,11 @@ function GalleryGrid({ content, setSelectedImage, inFavorite }) {
           </div>
         ) : (
           <div className="gallery-grid-empty">
-            <p>Галерея пуста</p>
+            <p>{language === "ru" ? "Галерея пуста" : "Gallery is empty"}</p>
             <p className="gallery-grid-empty-hint">
                 {inFavorite ? 
-                    'К сожалению избранные изображения отсутствуют 😔' 
-                    : 'Нажмите "Загрузить еще" для добавления изображени'
+                    getTranslation("noFavoriteImages")
+                    : getTranslation("clickLoadMore")
                 } 
             </p>
           </div>

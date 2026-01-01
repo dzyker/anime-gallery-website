@@ -4,14 +4,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  position: relative;
-}
-
-.gallery-app-image {
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed;
 }
 
 .gallery-controls-section {

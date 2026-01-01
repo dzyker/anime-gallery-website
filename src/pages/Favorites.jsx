@@ -1,16 +1,18 @@
 import { favoritesContext } from "../contexts/FavoritesContext";
 import { backgroundContext } from "../contexts/BackgroundContext";
-import { useContext, useState, useEffect } from 'react'
+import { languageContext } from "../contexts/LanguageContext";
+import { useContext, useState, useEffect } from 'react';
 import GalleryGrid from "../components/GalleryGrid";
 import ModalWindow from "../components/ModalWindow";
-import './Gallery.css'
-import './Favorites.css'
+import './Gallery.css';
+import './Favorites.css';
 
 function Favorites() {
     const { favorites } = useContext(favoritesContext)
     const { backgroundStyle, changeBackground } = useContext(backgroundContext);
     const [selectedImage, setSelectedImage] = useState(null);
-    const inFavorite = true
+    const inFavorite = true;
+    const { getTranslation } = useContext(languageContext);
 
     const favoriteContent = favorites.map(url => ({url}))
 
@@ -22,9 +24,9 @@ function Favorites() {
                 <button 
                     onClick={changeBackground} 
                     className="buttons-btn buttons-btn-background"
-                    title="Сменить фон"
+                    title={getTranslation("changeBackground")}
                 >
-                    🎨 Сменить фон
+                    🎨 {getTranslation("changeBackground")}
                 </button>
             </div>  
 

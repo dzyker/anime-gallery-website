@@ -5,6 +5,7 @@ import Gallery from "./pages/Gallery";
 import Favorites from "./pages/Favorites";
 import Settings from "./pages/Settings";
 import { AppProvider } from "./contexts/AppProvider";
+import "./App.css"
 
 function Layout() {
   return (

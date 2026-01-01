@@ -1,10 +1,15 @@
 import './SearchForm.css'
+import { useContext } from 'react'
+import { languageContext } from '../contexts/LanguageContext'
 
 function SearchForm({ imageType, setImageType, mode, sfwList, nsfwList }) {
+
+    const { getTranslation } = useContext(languageContext);
+
     return(<div className="search-form">
                 <div className="search-select-group">
                 <label htmlFor="image-type-select" className="search-select-label">
-                    Выберите тип изображения:
+                    {getTranslation("chooseImageType")}:
                 </label>
                 <select
                     id="image-type-select"

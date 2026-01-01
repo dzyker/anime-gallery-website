@@ -6,6 +6,7 @@ import ButtonsGroup from "../components/ButtonsGroup";
 import ModalWindow from "../components/ModalWindow";
 import SearchForm from "../components/SearchForm";
 import { backgroundContext } from "../contexts/BackgroundContext";
+import { languageContext } from "../contexts/LanguageContext";
 
 function Gallery() {
   const [loading, setLoading] = useState(true);
@@ -14,8 +15,9 @@ function Gallery() {
   const [imageType, setImageType] = useState("waifu");
   const [selectedImage, setSelectedImage] = useState(null);
   const [mode, setMode] = useState("sfw");
-  const inFavorite = false
+  const inFavorite = false;
   const { backgroundStyle, changeBackground } = useContext(backgroundContext);
+  const { getTranslation, language } = useContext(languageContext);
 
   useEffect(() => {
     async function initialLoad() {
@@ -77,22 +79,19 @@ function Gallery() {
     try {
       setError(null);
 
-      // Создаем массив промисов
       const promises = Array.from({ length: count }, () =>
         fetch(
           `https://api.waifu.pics/${mode || "sfw"}/${type || "waifu"}`
         ).then((response) => {
           if (!response.ok) {
-            throw new Error("Ошибка загрузки");
+            throw new Error(language == "ru" ? "Ошибка загрузки" : "Download error");
           }
           return response.json();
         })
       );
 
-      // Ждем все запросы и получаем массив данных
       const results = await Promise.all(promises);
 
-      // Фильтруем дубликаты перед добавлением
       setContent((c) => {
         const existingUrls = new Set(c.map((item) => item.url));
         const uniqueResults = results.filter(
@@ -109,7 +108,7 @@ function Gallery() {
     return (
       <div className="gallery-loading-container">
         <div className="gallery-spinner"></div>
-        <p>Загрузка изображений...</p>
+        <p>{getTranslation("loading")}...</p>
       </div>
     );
   }
@@ -117,7 +116,7 @@ function Gallery() {
   if (error) {
     return (
       <div className="gallery-error-container">
-        <p>Ошибка: {error.message}</p>
+        <p>{getTranslation("errorMessage")}: {error.message}</p>
       </div>
     );
   }
