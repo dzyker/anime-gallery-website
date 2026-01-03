@@ -1,4 +1,4 @@
-# Image Gallery App
+# Image Gallery Hub
 
 A fun project - an interactive image gallery application built with React and Vite. This application allows you to browse and view images from the waifu.pics API.
 
