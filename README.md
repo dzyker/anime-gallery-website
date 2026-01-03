@@ -54,7 +54,10 @@ Navigation bar
 
 Home page
 
-In progress
+<img width="3043" height="1454" alt="image" src="https://github.com/user-attachments/assets/c25aed14-9f99-40ca-ac15-3107220450c8" />
+<img width="2742" height="1330" alt="image" src="https://github.com/user-attachments/assets/9300643d-a5ac-4378-ac94-2b4acb9bacfc" />
+<img width="2684" height="988" alt="image" src="https://github.com/user-attachments/assets/3a5b8db7-2cf5-4bdc-8146-5fbb11f5d818" />
+<img width="1982" height="1382" alt="image" src="https://github.com/user-attachments/assets/e0af21f9-4c41-41d0-ba84-df735c6d29dd" />
 
 Gallery page
 
@@ -77,10 +80,6 @@ Favorites page
 
 2. This images will be saved
 <img width="2112" height="1190" alt="image" src="https://github.com/user-attachments/assets/92887a31-d73b-4cbe-9dda-26fb687b5e8d" />
-
-Settings page
-
-In progress
 
 ## Note
 
