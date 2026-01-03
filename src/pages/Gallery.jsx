@@ -7,6 +7,7 @@ import ModalWindow from "../components/ModalWindow";
 import SearchForm from "../components/SearchForm";
 import { backgroundContext } from "../contexts/BackgroundContext";
 import { languageContext } from "../contexts/LanguageContext";
+import Footer from "../components/Footer"
 
 function Gallery() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [mode, setMode] = useState("sfw");
   const inFavorite = false;
-  const { backgroundStyle, changeBackground } = useContext(backgroundContext);
+  const { changeBackground } = useContext(backgroundContext);
   const { getTranslation, language } = useContext(languageContext);
 
   useEffect(() => {
@@ -122,7 +123,7 @@ function Gallery() {
   }
 
   return (
-    <div className="gallery-app gallery-app-image" style={backgroundStyle}>
+    <div className="gallery-app gallery-app-image">
       <div className="gallery-controls-section">
         <SearchForm
           imageType={imageType}
@@ -149,6 +150,7 @@ function Gallery() {
         selectedImage={selectedImage}
         setSelectedImage={setSelectedImage}
       />
+      <Footer />
     </div>
   );
 }

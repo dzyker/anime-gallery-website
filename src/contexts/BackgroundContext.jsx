@@ -10,13 +10,16 @@ import Background9 from "../assets/Backgrounds/Background9.jpg";
 import Background10 from "../assets/Backgrounds/Background10.jpg";
 import Background11 from "../assets/Backgrounds/Background11.jpg";
 import Background12 from "../assets/Backgrounds/Background12.jpg";
-import { createContext, useState, useMemo } from "react";
+import { createContext, useState, useMemo, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export const backgroundContext = createContext({});
 
 export function BackgroundContextProvider({ children }) {
+
+  const location = useLocation();
   const [currentBackground, setCurrentBackground] = useState(0);
-  const backgrounds = [
+  const galleryBackgrounds = [
     Background1,
     Background2,
     Background3,
@@ -30,33 +33,36 @@ export function BackgroundContextProvider({ children }) {
     Background11,
     Background12,
   ];
+  const homeBackgrounds = ["#0e0e0e", "#ffffff"]
 
   const backgroundStyle = useMemo(() => {
-    const bgIndex =
-      currentBackground >= 0 && currentBackground < backgrounds.length
-        ? currentBackground
-        : 0;
-    const bgImage = backgrounds[bgIndex];
-
-    if (bgImage) {
+    if (location.pathname === "/gallery" || location.pathname === "/favorites") {
+      const bgImage = galleryBackgrounds[currentBackground % galleryBackgrounds.length];
       return {
-        backgroundImage: `linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%), url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      };
+          backgroundImage: `linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%), url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+      }
+    } else if (location.pathname === "/" || location.pathname === "/settings") {
+      return {
+          backgroundColor: homeBackgrounds[currentBackground % homeBackgrounds.length],
+      }
     }
-    return {};
-  }, [currentBackground]);
+  }, [location.pathname, currentBackground]);
+
+  useEffect(() => {
+    setCurrentBackground(0)
+  }, [location.pathname])
 
   function changeBackground() {
-    setCurrentBackground((prev) => (prev + 1) % backgrounds.length);
+    setCurrentBackground((prev) => (prev + 1) % homeBackgrounds.length);
   }
 
   return (
     <backgroundContext.Provider
-      value={{ backgroundStyle, currentBackground, changeBackground }}
+      value={{ backgroundStyle, changeBackground}}
     >
       {children}
     </backgroundContext.Provider>

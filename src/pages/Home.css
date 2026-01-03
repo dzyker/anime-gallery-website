@@ -1,0 +1,531 @@
+.home-app {
+    overflow: hidden;
+    background: #0d0d0d;
+    font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.home-section-one {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 0px 4px 70px 60px rgba(0, 0, 0, 0.25);
+    background: url("../assets/HomePage/images/image1.png") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+
+.home-section-one-h1 {
+    border-top: 7px black solid;
+    border-bottom: 7px black solid;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: Oswald;
+    font-style: Regular;
+    font-weight: 400;
+    line-height: 119px;
+    letter-spacing: 0%;
+    display: block;
+}
+
+.home-section-one-p {
+    margin: 51px auto 0;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.904);
+    font-family: Oswald;
+    font-style: Regular;
+    font-weight: 400;
+    line-height: 59px;
+    max-width: 1100px;
+}
+
+.home-section-sepparation1 {
+    text-align: center;
+    display: flex;
+    margin: 58px 0;
+    align-items: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    font-family: Inter;
+    font-style: Regular;
+    font-weight: 400;
+}
+
+.home-section-sepparation1-text {
+    padding: 0 10px;
+    color: #fff;
+}
+
+.home-section-sepparation1::before, .home-section-sepparation1::after, .home-section-sepparation2::before, .home-section-sepparation2::after  {
+    content: "";
+    flex: 1;
+    border-bottom: 7px solid rgba(41, 44, 47, 1);
+}
+
+.home-section-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home-section-two-card-wrapper {
+    position: relative;
+}
+
+.home-section-two-image {
+    display: block;
+    background-size: cover;
+    width: 100%;
+    max-height: 1000px;
+}
+
+#home-image2 {
+    height: 100%;
+}
+
+.home-section-two-image-figcaption {
+    position: absolute;
+    bottom: 13px;
+    word-break: break-word;
+    color: rgba(255, 255, 255, 1);
+    font-family: Oswald;
+    font-style: Regular;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-section-two-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: Rubik Mono One;
+    font-style: Regular;
+    font-size: 180%;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: left;
+    margin: 46px;
+    transition: color 0.3s ease;
+}
+
+.home-section-two-link::before {
+    content: "";
+    margin-right: 10px;
+    padding: 50px;
+    border-radius: 50%;
+    background: url("../assets/HomePage/images/red-button.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-section-two-link:hover {
+    color: #ffffffc8;
+}
+
+.home-section-sepparation2 {
+    display: flex;
+    width: 100%;
+}
+
+.home-section-three {
+    padding: 50px 41px;
+    margin: 0 auto;
+    max-width: 2000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-section-three-text-wrapper {
+    color: rgba(255, 255, 255, 1);
+    font-family: Oswald;
+    font-style: Regular;
+    font-weight: 400;
+    line-height: 59px;
+    letter-spacing: 0px;
+}
+
+.home-section-three-h1 {
+    text-align: start;
+    font-size: 80px;
+}
+
+.home-section-three-ul {
+    text-align: left;
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+.home-section-three-ul > li {
+    margin-top: 20px;
+}
+
+.home-video-section-three {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    width: 400px;
+}
+
+.home-section-four {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.home-section-four-lines {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.home-section-four-content-wrapper {
+    width: 100%;
+}
+
+.home-section-four-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    position: relative;
+    font-family: Rubik Mono One;
+    font-style: Regular;
+    font-weight: 400;
+    line-height: 240%;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.home-section-four-quote > blockquote {
+    color: rgba(255, 255, 255, 1);
+    font-size: 220%;
+}
+
+.home-section-four-quote > span {
+    color: rgba(221, 221, 221, 1);
+    font-size: 150%;
+}
+
+.home-section-four-video  {
+    position: absolute;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.home-section-four-Flover {
+    border-radius: 21% 0px 0px 21%;
+}
+.home-section-four-Frieren, .home-section-four-LoveStory, .home-section-four-MagicBattle, .home-section-four-SoloLeveling, .home-section-four-YourName {
+    border-radius: 21%;
+}
+.home-section-four-Horimiya {
+    border-radius: 0px 21% 21% 0px;
+}
+
+.home-section-four-LoveStory, .home-section-four-MagicBattle, .home-section-four-YourName, .home-section-four-SoloLeveling {
+    display: none;
+}
+
+@media (min-width: 340px) {
+    .home-section-one {
+        padding: 100px 0 170px;
+    }
+    .home-section-one-h1 {
+        font-size: 50px;
+    }
+    .home-section-one-p {
+        font-size: 25px;
+    }
+    .home-section-sepparation1 {
+        font-size: 30px;
+    }
+    .home-section-two-cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .home-section-two-image-figcaption {
+        font-size: 30px;
+    }
+    .home-section-three {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 30px;
+    }
+    .home-section-three-h1 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .home-section-three-ul {
+        margin-top: 30px;
+        font-size: 20px;
+        line-height: 34px;
+    }
+    .home-section-three-ul > li {
+        margin-top: 15px;
+    }
+    .home-video-section-three {
+        margin-top: 30px;
+        height: 500px;
+    }
+    .home-section-four {
+        padding: 220px 0 290px;
+    }
+    .home-section-four-quote {
+        width: 100%;
+    }
+    .home-section-four-quote > blockquote {
+        font-size: 140%;
+    }
+    .home-section-four-quote > span {
+        font-size: 100%;
+    }
+    .home-section-four-Flover {
+        top: auto;
+        bottom: 1%;
+        right: 0;
+        width: 40%;
+        height: 26%;
+    }
+    .home-section-four-Frieren {
+        top: 2%;
+        left: 0;
+        width: 100%;
+        height: 20%;
+    }
+    .home-section-four-Horimiya {
+        bottom: 1%;
+        top: auto;
+        left: 0;
+        width: 40%;
+        height: 26%;
+    }
+}
+
+@media (min-width: 440px) {
+    .home-section-four-quote {
+        width: 60%;
+    }
+}
+
+@media (min-width: 600px) {    
+    .home-section-sepparation1 {
+        font-size: 40px;
+    }
+    .home-section-sepparation1-text {
+        max-width: 700px;
+    }
+    .home-section-two-image-figcaption {
+        font-size: 40px;
+    }
+    .home-section-three-ul {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    .home-video-section-three {
+        width: 500px;
+    }
+    .home-section-four {
+        padding: 250px 0;
+    }
+    .home-section-four-YourName {
+        display: block;
+        bottom: 3%;
+        right: -1%;
+        height: 27%;
+        width: 40%;
+    }
+    .home-section-four-SoloLeveling {
+        display: block;
+        bottom: 3%;
+        left: -6%;
+        height: 27%;
+        width: 40%;
+    }
+    .home-section-four-Horimiya, .home-section-four-Flover {
+        top: 35%;
+        width: 22%;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-section-one {
+        padding: 150px 0 180px;
+    }
+    .home-section-one-h1 {
+        font-size: 55px;
+    }
+    .home-section-one-p {
+        font-size: 40px;
+    }
+    .home-section-two-cards-wrapper {
+        gap: 35px;
+    }
+    .home-section-two-image-figcaption {
+        font-size: 50px;
+    }
+    .home-section-four-Frieren {
+        top: 2%;
+        left: 4%;
+        height: 26%;
+        width: 40%;
+    }
+    .home-section-four-MagicBattle {
+        display: block;
+        bottom: 2%;
+        left: 8%;
+        height: 27%;
+        width: 37%;
+    }
+    .home-section-four-YourName {
+        top: 2%;
+    }
+    .home-section-four-SoloLeveling {
+        right: 5%;
+        left: auto;
+    }
+}
+
+@media (min-width: 830px) {
+    .home-section-two-cards-wrapper {
+        padding: 0 40px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        width: 100%;
+        height: auto;
+    }
+    .home-section-three {
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+    .home-section-three-h1 {
+        font-size: 60px;
+        margin-bottom: 50px;
+    }
+    .home-section-three-ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        gap: 20px;
+        font-size: 30px;
+    }
+    .home-video-section-three {
+        width: 450px;
+        padding-left: 20px;
+        margin-top: 0;
+    }
+    .home-section-four-quote {
+        width: 60%;
+    }
+}
+
+@media (min-width: 960px) {
+    .home-section-four {
+        padding: 300px 0;
+    }
+    .home-section-four-quote {
+        width: 56%;
+    }
+    .home-section-four-Frieren {
+        left: -4%;
+    }
+    .home-section-four-YourName {
+        width: 35%;
+        right: -5%;
+    }
+    .home-section-four-LoveStory {
+        display: block;
+        top: 0;
+        left: 39%;
+        height: 32%;
+        width: 30%;
+    }
+}
+
+@media (min-width: 1260px) {
+    .home-section-four {
+        padding: 350px 0;
+    }
+    .home-section-four-quote > blockquote {
+        font-size: 250%;
+    }
+    
+    .home-section-four-quote > span {
+        font-size: 180%;
+    }
+    .home-section-four-LoveStory {
+        height: 30%;
+    }
+    .home-section-four-SoloLeveling {
+        height: 30%;
+    }
+    .home-section-four-MagicBattle {
+        height: 30%;
+    }
+}
+
+@media (min-width: 1520px) {
+    .home-section-two-link {
+        font-size: 250%;
+    }
+    .home-section-three-h1 {
+        font-size: 70px;
+    }
+    .home-section-three-ul {
+        font-size: 35px;
+    }
+    .home-section-four {
+        padding: 550px 0;
+    }
+}
+
+@media (min-width: 1800px) {
+    .home-section-three-h1 {
+        font-size: 90px;
+    }
+    .home-section-three-ul {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .home-section-one-h1 {
+        font-size: 80px;
+    }
+    .home-section-one-p {
+        line-height: 69px;
+        font-size: 45px;
+        max-width: 1300px;
+    }
+    .home-section-sepparation1-text {
+        font-size: 50px;
+        max-width: 2000px;
+    }
+    .home-section-three {
+        justify-content: center;
+        gap: 20px;
+    }
+    .home-section-four {
+        padding: 600px 0;
+    }
+    .home-section-four-LoveStory {
+        left: 38%;
+    }
+}

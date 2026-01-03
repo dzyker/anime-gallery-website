@@ -5,11 +5,16 @@ import Gallery from "./pages/Gallery";
 import Favorites from "./pages/Favorites";
 import Settings from "./pages/Settings";
 import { AppProvider } from "./contexts/AppProvider";
+import { useContext, useEffect } from "react";
 import "./App.css"
+import { backgroundContext } from "./contexts/BackgroundContext";
 
 function Layout() {
+  
+  const { backgroundStyle} = useContext(backgroundContext);
+
   return (
-    <div className="app">
+    <div className="app" style={backgroundStyle}>
       <Navigation />
       <main>
         <Outlet />
@@ -25,8 +30,7 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />  
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="favorites" element={<Favorites />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
