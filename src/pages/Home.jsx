@@ -11,46 +11,49 @@ import image3 from "../assets/HomePage/images/image3.jpeg"
 import image4 from "../assets/HomePage/images/image4.jpg"
 import videoSection3 from "../assets/HomePage/videos/videoSection3.mp4"
 import Footer from "../components/Footer"
-
+import { useContext } from "react"
+import { languageContext } from "../contexts/LanguageContext"
 
 function Home() {
+    const { language } = useContext(languageContext);
+
     return (
         <div className="home-app">
             <section className="home-section-one">
-                <h1 className="home-section-one-h1">Что такое аниме?</h1>
-                <p className="home-section-one-p">Аниме — это стиль анимации, зародившийся в Японии и ставший глобальным феноменом. Хотя термин буквально означает «анимация» по-японски, за пределами Японии он относится именно к анимации, произведённой в Японии, или к её характерному стилю и повествованию. Это разнообразная среда, охватывающая бесчисленные жанры и создаваемая для аудитории всех возрастов.</p>
+                <h1 className="home-section-one-h1">{language === "ru" ? "Что такое аниме?" : "What is anime?"}</h1>
+                <p className="home-section-one-p">{language === "ru" ? "Аниме — это стиль анимации, зародившийся в Японии и ставший глобальным феноменом. Хотя термин буквально означает «анимация» по-японски, за пределами Японии он относится именно к анимации, произведённой в Японии, или к её характерному стилю и повествованию. Это разнообразная среда, охватывающая бесчисленные жанры и создаваемая для аудитории всех возрастов." : 'Anime is a style of animation that originated in Japan and has become a global phenomenon. Although the term literally means «animation» in Japanese, outside of Japan it refers specifically to animation produced in Japan or its distinctive style and narrative. It is a diverse environment spanning countless genres and created for an audience of all ages.'}</p>
             </section>
-            <div className="home-section-sepparation1" ><span className="home-section-sepparation1-text">Список популярных жанров</span></div>
+            <div className="home-section-sepparation1"><span className="home-section-sepparation1-text">{language === "ru" ? 'Список популярных жанров' : 'List of popular genres' }</span></div>
             <section className="home-section-two">
                 <div className="home-section-two-cards-wrapper">
                     <div className="home-section-two-card-wrapper">
                         <img id="home-image2" className="home-section-two-image" src={image2} alt="Magic battle image" />
-                        <span className="home-section-two-image-figcaption">Экшн</span>
+                        <span className="home-section-two-image-figcaption">{language === "ru" ? 'Экшн' : 'Action'}</span>
                     </div>
                     <div className="home-section-two-card-wrapper">
                         <img className="home-section-two-image" src={image3} alt="Sword art online image" />
-                        <span className="home-section-two-image-figcaption">Фэнтези</span>
+                        <span className="home-section-two-image-figcaption">{language === "ru" ? 'Фэнтези' : 'Fantasy'}</span>
                     </div>
                     <div className="home-section-two-card-wrapper">
                         <img className="home-section-two-image" src={image4} alt="Your name image" />
-                        <span className="home-section-two-image-figcaption">Романтика</span>
+                        <span className="home-section-two-image-figcaption">{language === "ru" ? 'Романтика' : 'Romance'}</span>
                     </div>
                 </div>
-                <a target="_blank" href="https://shikimori.one/animes/kind/tv" className="home-section-two-link" >сайт для просмотра аниме</a>
+                <a target="_blank" href="https://shikimori.one/animes/kind/tv" className="home-section-two-link" >{language === "ru" ? 'сайт для просмотра аниме' : 'anime viewing website'}</a>
             </section>
             <div className="home-section-sepparation2"></div>
             <section className="home-section-three">
                 <div className="home-section-three-text-wrapper">
-                    <h1 className="home-section-three-h1">Для абсолютных новичков:</h1>
+                    <h1 className="home-section-three-h1">{language === "ru" ? 'Для абсолютных новичков:' : 'For absolute beginners:'}</h1>
                     <ul className="home-section-three-ul">
-                        <li>Моя геройская академия: Современная история о супергероях, в которую легко вникнуть.</li>
-                        <li>Тетрадь смерти: Захватывающая психологическая игра в кошки-мышки.</li>
-                        <li>Атака титанов: Тёмное, эпичное фэнтези с невероятной загадкой экшеном.</li>
+                        <li>{language === "ru" ? 'Моя геройская академия: Современная история о супергероях, в которую легко вникнуть.' : "My Hero Academy: A modern superhero story that's easy to delve into."}</li>
+                        <li>{language === "ru" ? 'Тетрадь смерти: Захватывающая психологическая игра в кошки-мышки.' : 'Death Note: An exciting psychological cat-and-mouse game.'}</li>
+                        <li>{language === "ru" ? 'Атака титанов: Тёмное, эпичное фэнтези с невероятной загадкой экшеном.' : 'Attack of the Titans: Dark, epic fantasy with incredible mystery and action.'}</li>
                     </ul>
                 </div>
                 <video className="home-video-section-three" src={videoSection3} autoPlay muted loop />
             </section>
-            <hr />
+            <div className="home-section-sepparation2"></div>
             <section className="home-section-four">
                 <div className="home-section-four-lines"></div>
                 <div className="home-section-four-content-wrapper">
@@ -62,8 +65,8 @@ function Home() {
                     <video className="home-section-four-video home-section-four-SoloLeveling" src={SoloLeveling} autoPlay muted loop />
                     <video className="home-section-four-video home-section-four-YourName" src={YourName} autoPlay muted loop />
                     <div className="home-section-four-quote">
-                        <blockquote>«Когда вы достигаете точки невозврата, именно тогда это действительно становится путешествием»</blockquote>
-                        <span>Хината Мияке, «Место дальше, чем Вселенная».</span>
+                        <blockquote>{language === "ru" ? '«Когда вы достигаете точки невозврата, именно тогда это действительно становится путешествием»' : "«When you reach the point of no return, that's when it really becomes a journey.»"}</blockquote>
+                        <span>{language === "ru" ? 'Хината Мияке, «Место дальше, чем Вселенная».' : 'Hinata Miyake, «A place further than the Universe.»'}</span>
                     </div>
                 </div>
             </section>
