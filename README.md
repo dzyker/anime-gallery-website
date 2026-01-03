@@ -48,6 +48,10 @@ npm run preview
 
 ## Usage
 
+Navigation bar
+<img width="1748" height="714" alt="image" src="https://github.com/user-attachments/assets/15e4247d-7c48-4cfb-8756-b7f3b1011e71" />
+<img width="2448" height="174" alt="image" src="https://github.com/user-attachments/assets/6e94e20e-b259-48b1-a6c8-8d17acb4bb18" />
+
 Home page
 
 In progress
