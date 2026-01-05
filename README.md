@@ -1,8 +1,8 @@
-# Image Gallery App
+# Image Gallery Hub
 
 A fun project - an interactive image gallery application built with React and Vite. This application allows you to browse and view images from the waifu.pics API.
 
-I also host this project on Yandex Cloud: https://anime-gallery-online.website.yandexcloud.net
+I also host this project on Yandex Cloud: https://anime-gallery-hub.website.yandexcloud.net
 
 ## Features
 
