@@ -1,7 +1,7 @@
 import "./Footer.css"
 import { FaGithub, FaTelegram, FaVk } from 'react-icons/fa';
 import { NavLink } from "react-router-dom"
-import Logo from "../assets/Logo.png"
+import Logo from "../Logo.png"
 
 function Footer() {
     return (

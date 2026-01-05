@@ -1,4 +1,5 @@
 .home-app {
+    position: relative;
     overflow: hidden;
     background: #0d0d0d;
     font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     box-shadow: inset 0px 4px 70px 60px rgba(0, 0, 0, 0.25);
-    background: url("../assets/HomePage/images/image1.png") no-repeat center;
+    background: url("../HomePage/images/image1.png") no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
@@ -121,7 +122,7 @@
     margin-right: 10px;
     padding: 50px;
     border-radius: 50%;
-    background: url("../assets/HomePage/images/red-button.png");
+    background: url("../HomePage/images/red-button.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

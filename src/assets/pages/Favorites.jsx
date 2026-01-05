@@ -6,7 +6,6 @@ import GalleryGrid from "../components/GalleryGrid";
 import ModalWindow from "../components/ModalWindow";
 import './Gallery.css';
 import './Favorites.css';
-import Footer from "../components/Footer";
 
 function Favorites() {
     const { favorites } = useContext(favoritesContext)
@@ -35,8 +34,6 @@ function Favorites() {
                 selectedImage={selectedImage}
                 setSelectedImage={setSelectedImage}
             />
-
-            <Footer />
       </div>
     )
 }

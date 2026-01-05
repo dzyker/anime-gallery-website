@@ -1,13 +1,13 @@
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
-import Navigation from "./components/Navigation";
-import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
-import Favorites from "./pages/Favorites";
-import Settings from "./pages/Settings";
-import { AppProvider } from "./contexts/AppProvider";
+import Navigation from "./assets/components/Navigation";
+import Footer from "./assets/components/Footer";
+import Home from "./assets/pages/Home";
+import Gallery from "./assets/pages/Gallery";
+import Favorites from "./assets/pages/Favorites";
+import { AppProvider } from "./assets/contexts/AppProvider";
 import { useContext, useEffect } from "react";
 import "./App.css"
-import { backgroundContext } from "./contexts/BackgroundContext";
+import { backgroundContext } from "./assets/contexts/BackgroundContext";
 
 function Layout() {
   
@@ -19,6 +19,7 @@ function Layout() {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 }

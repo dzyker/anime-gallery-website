@@ -7,7 +7,6 @@ import ModalWindow from "../components/ModalWindow";
 import SearchForm from "../components/SearchForm";
 import { backgroundContext } from "../contexts/BackgroundContext";
 import { languageContext } from "../contexts/LanguageContext";
-import Footer from "../components/Footer"
 
 function Gallery() {
   const [loading, setLoading] = useState(true);
@@ -150,7 +149,6 @@ function Gallery() {
         selectedImage={selectedImage}
         setSelectedImage={setSelectedImage}
       />
-      <Footer />
     </div>
   );
 }

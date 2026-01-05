@@ -1,16 +1,15 @@
 import "./Home.css"
-import FlowerVideo from "../assets/HomePage/videos/Flower.mp4"
-import LoveStory from "../assets/HomePage/videos/Love Story.mp4"
-import Frieren from "../assets/HomePage/videos/Frieren.mp4"
-import Horimiya from "../assets/HomePage/videos/Horimiya.mp4"
-import MagicBattle from "../assets/HomePage/videos/Magic Battle.mp4"
-import SoloLeveling from "../assets/HomePage/videos/Solo Leveling.mp4"
-import YourName from "../assets/HomePage/videos/Your Name.mp4"
-import image2 from "../assets/HomePage/images/image2.jpg"
-import image3 from "../assets/HomePage/images/image3.jpeg"
-import image4 from "../assets/HomePage/images/image4.jpg"
-import videoSection3 from "../assets/HomePage/videos/videoSection3.mp4"
-import Footer from "../components/Footer"
+import FlowerVideo from "../HomePage/videos/Flower.mp4"
+import LoveStory from "../HomePage/videos/Love Story.mp4"
+import Frieren from "../HomePage/videos/Frieren.mp4"
+import Horimiya from "../HomePage/videos/Horimiya.mp4"
+import MagicBattle from "../HomePage/videos/Magic Battle.mp4"
+import SoloLeveling from "../HomePage/videos/Solo Leveling.mp4"
+import YourName from "../HomePage/videos/Your Name.mp4"
+import image2 from "../HomePage/images/image2.jpg"
+import image3 from "../HomePage/images/image3.jpeg"
+import image4 from "../HomePage/images/image4.jpg"
+import videoSection3 from "../HomePage/videos/videoSection3.mp4"
 import { useContext } from "react"
 import { languageContext } from "../contexts/LanguageContext"
 
@@ -70,7 +69,6 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }

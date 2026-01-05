@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaGithub, FaTelegram, FaVk } from 'react-icons/fa';
 import './Navigation.css';
-import logo from "../assets/Logo.png";
+import logo from "../Logo.png";
 import { languageContext } from "../contexts/LanguageContext";
 import { useContext } from "react";
 
