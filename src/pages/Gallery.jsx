@@ -14,7 +14,6 @@ function Gallery() {
   const [error, setError] = useState(null);
   const [imageType, setImageType] = useState("waifu");
   const [selectedImage, setSelectedImage] = useState(null);
-  const [mode, setMode] = useState("sfw");
   const inFavorite = false;
   const { changeGalleryBackground } = useContext(backgroundContext);
   const { getTranslation, language } = useContext(languageContext);
@@ -27,7 +26,7 @@ function Gallery() {
       setLoading(false);
     }
     initialLoad();
-  }, [imageType, mode]);
+  }, [imageType]);
 
   const sfwList = [
     "waifu",
@@ -63,17 +62,6 @@ function Gallery() {
     "cringe",
   ];
 
-  const nsfwList = ["waifu", "neko", "trap", "blowjob"];
-
-  function changeMode(e) {
-    const newMode = e.target.value;
-    setMode(newMode);
-    // Устанавливаем первый доступный тип из нового списка
-    const newList = newMode === "sfw" ? sfwList : nsfwList;
-    setImageType(newList[0]);
-    setContent([]);
-  }
-
   // Функция для загрузки нескольких картинок
   async function fetchMultipleImages(count, type) {
     try {
@@ -81,7 +69,7 @@ function Gallery() {
 
       const promises = Array.from({ length: count }, () =>
         fetch(
-          `https://api.waifu.pics/${mode || "sfw"}/${type || "waifu"}`
+          `https://api.waifu.pics/sfw/${type || "waifu"}`
         ).then((response) => {
           if (!response.ok) {
             throw new Error(language == "ru" ? "Ошибка загрузки" : "Download error");
@@ -127,12 +115,10 @@ function Gallery() {
         <SearchForm
           imageType={imageType}
           setImageType={setImageType}
-          mode={mode}
           sfwList={sfwList}
-          nsfwList={nsfwList}
         />
 
-        <ModeSelector mode={mode} changeMode={changeMode} />
+        <ModeSelector />
       </div>
 
       <GalleryGrid inFavorite={inFavorite} content={content} setSelectedImage={setSelectedImage} />

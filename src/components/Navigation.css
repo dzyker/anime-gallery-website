@@ -61,8 +61,8 @@
 .header-social_icons {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin-left: 80px;
 }
 
 .header-social_icons a {

@@ -1,5 +1,6 @@
 import favoriteFalse from "../assets/favorite-false.png";
 import favoriteTrue from "../assets/favorite-true.png";
+import { PiEyesFill } from "react-icons/pi";
 import { useContext } from "react";
 import { favoritesContext } from "../contexts/FavoritesContext";
 
@@ -15,7 +16,7 @@ function GalleryCard({ el, id, favorite, getTranslation, setSelectedImage }) {
         loading="lazy"
       />
       <div className="gallery-grid-overlay">
-        <span className="gallery-grid-icon">👁️</span>
+        <span className="gallery-grid-icon"><PiEyesFill /></span>
       </div>
       <button
         className={`gallery-grid-favorite ${favorite ? "active" : ""}`}

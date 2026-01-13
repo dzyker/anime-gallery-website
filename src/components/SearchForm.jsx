@@ -2,7 +2,7 @@ import './SearchForm.css'
 import { useContext } from 'react'
 import { languageContext } from '../contexts/LanguageContext'
 
-function SearchForm({ imageType, setImageType, mode, sfwList, nsfwList }) {
+function SearchForm({ imageType, setImageType, sfwList}) {
 
     const { getTranslation } = useContext(languageContext);
 
@@ -17,7 +17,7 @@ function SearchForm({ imageType, setImageType, mode, sfwList, nsfwList }) {
                     value={imageType}
                     onChange={(e) => setImageType(e.target.value)}
                 >
-                    {(mode === 'sfw' ? sfwList : nsfwList).map((type) => (
+                    {sfwList.map((type) => (
                     <option key={type} value={type}>
                         {type.charAt(0).toUpperCase() + type.slice(1)}
                     </option>
