@@ -1,5 +1,5 @@
-import favoriteFalse from "../favorite-false.png";
-import favoriteTrue from "../favorite-true.png";
+import favoriteFalse from "../assets/favorite-false.png";
+import favoriteTrue from "../assets/favorite-true.png";
 import { useContext } from "react";
 import { favoritesContext } from "../contexts/FavoritesContext";
 

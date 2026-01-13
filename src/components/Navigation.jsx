@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { FaGithub, FaTelegram, FaVk } from 'react-icons/fa';
 import './Navigation.css';
-import logo from "../Logo.png";
+import logo from "../assets/Logo.png";
 import { languageContext } from "../contexts/LanguageContext";
 import { useContext } from "react";
 
@@ -20,7 +20,7 @@ function Header() {
                     <label htmlFor="header-en-language" className="header-set-language-label">EN</label>
 
                 </div>
-                <NavLink to='/'><img className="header-logo" src={logo} alt="logo" /></NavLink>
+                <NavLink className="header-logo" to='/'><img className="header-logo" src={logo} alt="logo" /></NavLink>
                 <nav>
                     <NavLink to='/' end className={({isActive}) => isActive ? "header-nav__link active" : "header-nav__link"}>{getTranslation("home")}</NavLink>
                     <NavLink to='/gallery' className={({isActive}) => isActive ? "header-nav__link active" : "header-nav__link"}>{getTranslation("gallery")}</NavLink>

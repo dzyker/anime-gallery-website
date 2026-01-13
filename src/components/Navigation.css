@@ -1,16 +1,9 @@
-.header-nav {
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
 .header-content-container {
   backdrop-filter: blur(10px);
   display: grid;
   grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
   padding: 20px 0;
   text-align: center;
-  border: 1px 0 solid rgba(255, 255, 255, 0.2);
 }
 
 .header-set-language {
@@ -37,7 +30,7 @@
 
 .header-logo {
   width: 80px;
-
+  margin: 0 auto;
 }
 
 .header-nav nav {

@@ -16,7 +16,7 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [mode, setMode] = useState("sfw");
   const inFavorite = false;
-  const { changeBackground } = useContext(backgroundContext);
+  const { changeGalleryBackground } = useContext(backgroundContext);
   const { getTranslation, language } = useContext(languageContext);
 
   useEffect(() => {
@@ -142,7 +142,7 @@ function Gallery() {
         fetchMultipleImages={fetchMultipleImages}
         content={content}
         setContent={setContent}
-        changeBackground={changeBackground}
+        changeBackground={changeGalleryBackground}
       />
 
       <ModalWindow

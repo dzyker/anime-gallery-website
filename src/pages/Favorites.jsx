@@ -5,11 +5,10 @@ import { useContext, useState, useEffect } from 'react';
 import GalleryGrid from "../components/GalleryGrid";
 import ModalWindow from "../components/ModalWindow";
 import './Gallery.css';
-import './Favorites.css';
 
 function Favorites() {
     const { favorites } = useContext(favoritesContext)
-    const { backgroundStyle, changeBackground } = useContext(backgroundContext);
+    const { backgroundStyle, changeGalleryBackground } = useContext(backgroundContext);
     const [selectedImage, setSelectedImage] = useState(null);
     const inFavorite = true;
     const { getTranslation } = useContext(languageContext);
@@ -22,7 +21,7 @@ function Favorites() {
 
             <div className="buttons-group">
                 <button 
-                    onClick={changeBackground} 
+                    onClick={changeGalleryBackground} 
                     className="buttons-btn buttons-btn-background"
                     title={getTranslation("changeBackground")}
                 >

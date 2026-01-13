@@ -1,17 +1,17 @@
 import { Routes, Route, Navigate, Outlet } from "react-router-dom";
-import Navigation from "./assets/components/Navigation";
-import Footer from "./assets/components/Footer";
-import Home from "./assets/pages/Home";
-import Gallery from "./assets/pages/Gallery";
-import Favorites from "./assets/pages/Favorites";
-import { AppProvider } from "./assets/contexts/AppProvider";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Gallery from "./pages/Gallery";
+import Favorites from "./pages/Favorites";
+import { AppProvider } from "./contexts/AppProvider";
 import { useContext, useEffect } from "react";
 import "./App.css"
-import { backgroundContext } from "./assets/contexts/BackgroundContext";
+import { backgroundContext } from "./contexts/BackgroundContext";
 
 function Layout() {
   
-  const { backgroundStyle} = useContext(backgroundContext);
+  const { backgroundStyle } = useContext(backgroundContext);
 
   return (
     <div className="app" style={backgroundStyle}>
